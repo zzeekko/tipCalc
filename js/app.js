@@ -6,7 +6,7 @@ const menuDivs = document.querySelectorAll('.menu-div')
 const receipt = document.getElementById('receipt')
 
 // set subtotal and tax
-let subbtotal = 0
+let subtotal = 0
 let tax = .07
 
 // grab the menu types
@@ -25,7 +25,7 @@ let menuItems = [
         type: 'appetizers',
         item: 'salmon dip',
         desc: 'fresh salmon spread and toast',
-        imgUrl: 'salmondip.jpeg',
+        imgUrl: 'salmondip.jpg',
         price: 10.99,
         qty: 0
     },
@@ -34,7 +34,7 @@ let menuItems = [
         type: 'appetizers',
         item: 'onion rings',
         desc: 'deep fried onion rings with comeback sauce',
-        imgUrl: 'onionrings.jpeg',
+        imgUrl: 'onionrings.jpg',
         price: 8.99,
         qty: 0
     },
@@ -43,7 +43,7 @@ let menuItems = [
         type: 'appetizers',
         item: 'guacamole dip',
         desc: 'fresh guacamole and pico de gallo made to order and served with chips',
-        imgUrl: 'guac.jpeg',
+        imgUrl: 'guac.jpg',
         price: 7.99,
         qty: 0
     },
@@ -52,7 +52,7 @@ let menuItems = [
         type: 'appetizers',
         item: 'spinach & artichoke dip',
         desc: 'creamy spinach and artichoke dip served with chips',
-        imgUrl: 'spinachartichoke.jpeg',
+        imgUrl: 'spinachartichoke.jpg',
         price: 8.99,
         qty: 0
     },
@@ -61,7 +61,7 @@ let menuItems = [
         type: 'entrees',
         item: 'chicken sandwich',
         desc: 'breaded chicken breast on a bun with pickles and lettuce',
-        imgUrl: 'chicken_sandwich.jpeg',
+        imgUrl: 'chicken_sandwich.jpg',
         price: 12.99,
         qty: 0
     },
@@ -70,7 +70,7 @@ let menuItems = [
         type: 'entrees',
         item: 'veggie burger',
         desc: 'bean veggie patty served with fries',
-        imgUrl: 'veggie_burger.jpeg',
+        imgUrl: 'veggie_burger.jpg',
         price: 12.99,
         qty: 0
     },
@@ -88,7 +88,7 @@ let menuItems = [
         type: 'entrees',
         item: 'pizza',
         desc: 'pepperoni and tomato pizza. 6 slices',
-        imgUrl: 'pizza.jpeg',
+        imgUrl: 'pizza.jpg',
         price: 16.99,
         qty: 0
     },
@@ -97,7 +97,7 @@ let menuItems = [
         type: 'drinks',
         item: 'lemonade',
         desc: 'fresh squeezed lemonade',
-        imgUrl: 'lemonade.jpeg',
+        imgUrl: 'lemonade.jpg',
         price: 3.99,
         qty: 0
     },
@@ -106,7 +106,7 @@ let menuItems = [
         type: 'drinks',
         item: 'beer',
         desc: 'choose from our domestic and imported slection',
-        imgUrl: 'beer.jpeg',
+        imgUrl: 'beer.jpg',
         price: 3.99,
         qty: 0
     },
@@ -115,7 +115,7 @@ let menuItems = [
         type: 'drinks',
         item: 'wine',
         desc: 'choose from our selection of wines served by the glass',
-        imgUrl: 'wine.jpeg',
+        imgUrl: 'wine.jpg',
         price: 7.99,
         qty: 0
     },
@@ -124,7 +124,7 @@ let menuItems = [
         type: 'drinks',
         item: 'sweet tea',
         desc: 'sweet tea',
-        imgUrl: 'tea.jpeg',
+        imgUrl: 'tea.jpg',
         price: 4.99,
         qty: 0
     },
@@ -133,7 +133,7 @@ let menuItems = [
         type: 'desserts',
         item: 'tiaramisu',
         desc: 'layered sponge cake',
-        imgUrl: 'tiramisu.jpeg',
+        imgUrl: 'tiramisu.jpg',
         price: 6.99,
         qty: 0
     },
@@ -142,7 +142,7 @@ let menuItems = [
         type: 'desserts',
         item: 'brownie',
         desc: 'chocolate brownie served with ice cream',
-        imgUrl: 'brownies.jpeg',
+        imgUrl: 'brownies.jpg',
         price: 7.99,
         qty: 0
     },
@@ -151,7 +151,7 @@ let menuItems = [
         type: 'desserts',
         item: 'chocolate chip cookies',
         desc: 'three chocolate chip cookies',
-        imgUrl: 'cookies.jpeg',
+        imgUrl: 'cookies.jpg',
         price: 5.99,
         qty: 0
     },
@@ -160,7 +160,7 @@ let menuItems = [
         type: 'desserts',
         item: 'apple pie',
         desc: 'slice of fresh store-made apple pie',
-        imgUrl: 'apple_pie.jpeg',
+        imgUrl: 'apple_pie.jpg',
         price: 8.99,
         qty: 0
     },
@@ -169,7 +169,7 @@ let menuItems = [
         type: 'sides',
         item: 'french fries',
         desc: 'basket of curly fries',
-        imgUrl: 'fries.jpeg',
+        imgUrl: 'fries.jpg',
         price: 3.99,
         qty: 0
     },
@@ -178,7 +178,7 @@ let menuItems = [
         type: 'sides',
         item: 'sweet potato fries',
         desc: 'home-cut sweet potato fries topped with cinammon and sugar',
-        imgUrl: 'sweet_potato_fries.jpeg',
+        imgUrl: 'sweet_potato_fries.jpg',
         price: 5.99,
         qty: 0
     },
@@ -187,7 +187,7 @@ let menuItems = [
         type: 'sides',
         item: 'veggie medley',
         desc: 'mixed vegetables',
-        imgUrl: 'veggie_medley.jpeg',
+        imgUrl: 'veggie_medley.jpg',
         price: 4.99,
         qty: 0
     },
@@ -196,7 +196,7 @@ let menuItems = [
         type: 'sides',
         item: 'side salad',
         desc: 'house salad with choice of ranch, caesar, italian dressing or vinaigrette',
-        imgUrl: 'house_salad.jpeg',
+        imgUrl: 'house_salad.jpg',
         price: 3.99,
         qty: 0
     }
@@ -205,8 +205,31 @@ let menuItems = [
 // confirm Button
 confirmBtn.addEventListener('click', (e)=> {
     e.preventDefault()
-    console.log('click')
+    getTotal()
 })
+
+//getTotal()
+const getTotal =()=> {
+
+    const subtotal = parseFloat(cartSubtotal.innerText)
+    const tipAmt = parseFloat(document.getElementById('tipAmt').value)
+    const otherAmt = parseFloat(document.getElementById('otherAmt').value)
+    const yourTip = document.getElementById('yourTip')
+    const theSubtotal = document.getElementById('theSubtotal')
+    const taxDisplay = document.getElementById('tax')
+
+    let taxTotal = subtotal * tax
+
+    let receiptTip = isNaN(tipAmt) ? otherAmt : (subtotal *tipAmt) 
+
+    let total = isNaN(tipAmt) ? subtotal + otherAmt + taxTotal : 
+        receiptTip + subtotal + taxTotal
+    
+    theSubtotal.innerText = subtotal
+    taxDisplay.innerText = taxTotal.toFixed(2)
+    yourTip.innerText = receiptTip.toFixed(2)
+    totalDisplay.innerText = total.toFixed(2)
+}
 
 // load the menu items
 // make rows
@@ -258,7 +281,7 @@ menuItems.forEach(item => {
                 data-price="${item.price}"
                 data-qty="${item.qty}"
                 data-item="${item.item}"
-            >add to card</button>
+            >add to cart</button>
             <div class="qty-div">
                 <button
                     class="btn btn-primary btn-subtract"
@@ -275,8 +298,7 @@ menuItems.forEach(item => {
                 > + </button>
             </div>
         </div>
-    </footer>
-    `
+    </footer>`
 
     column.appendChild(card)
 
@@ -310,7 +332,7 @@ const cartButtons = document.querySelectorAll('.cart-btn')
 cartButtons.forEach(button => {
 
     const price = parseFloat(button.getAttribute('data-price'))
-    const item = getAttribute('data-item')
+    const item = button.getAttribute('data-item')
     const id = parseFloat(button.getAttribute('data-id'))
 
     button.addEventListener('click', ()=> {
@@ -318,7 +340,12 @@ cartButtons.forEach(button => {
         for (let i = 0; i < menuItems.length; i++) {
             menuItems[i].id === id ? qty = menuItems[i].qty : null
         }
-        addItems(price, qty, item, id)
+
+        console.log(button)
+
+        if (button.getAttribute('data-qty') > 0) {
+            addItems(price, qty, item, id)
+        }
     })
 })
 
@@ -365,7 +392,7 @@ const makeReceipt =(obj, el)=> {
     const itemSubtotal = document.createElement('td')
     itemSubtotal.classList.add('item-subtotal', 'text-center')
     itemSubtotal.setAttribute('id', `subTotal${obj.id}`)
-    itemSubtotal.innerText = obj.itemTotal
+    itemSubtotal.innerText = obj.itemTotal.toFixed(2)
 
     tableRow.appendChild(receiptChoice)
     tableRow.appendChild(receiptQty)
@@ -376,7 +403,7 @@ const makeReceipt =(obj, el)=> {
 
 }
 
-const btnSubtract = document.querySelectorAll('btn-subtract')
+const btnSubtract = document.querySelectorAll('.btn-subtract')
 const btnAdd = document.querySelectorAll('.btn-add')
 
 btnSubtract.forEach(button => {
@@ -384,7 +411,7 @@ btnSubtract.forEach(button => {
         const btnId = parseFloat(button.getAttribute('data-id'))
         const spanQty = document.getElementById(`quantity${btnId}`)
 
-        for (let i = 0; i < menuItems.length; i++) {
+        for(let i = 0; i < menuItems.length; i++) {
             if(menuItems[i].id === btnId && menuItems[i].qty > 0) {
                 menuItems[i].qty-= 1
                 spanQty.innerText = menuItems[i].qty
@@ -398,11 +425,8 @@ btnAdd.forEach(button => {
         const btnId = parseFloat(button.getAttribute('data-id'))
         const spanQty = document.getElementById(`quantity${btnId}`)
 
-        for (let i = 0; i < menuItems.length; i++) {
-            if (menuItems[i].id == btnId
-                && menuItems[i].qty < 20
-                && cartButtons[i].dataset.id == btnId
-            ) {
+        for(let i = 0; i < menuItems.length; i++) {
+            if (menuItems[i].id == btnId && menuItems[i].qty < 20 && cartButtons[i].dataset.id == btnId) {
                 menuItems[i].qty+=1
                 cartButtons[i].setAttribute('data-qty', menuItems[i].qty)
                 spanQty.innerText = menuItems[i].qty
@@ -410,3 +434,4 @@ btnAdd.forEach(button => {
         }
     })
 })
+
